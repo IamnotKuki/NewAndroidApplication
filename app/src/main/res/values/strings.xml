@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MyNewApplication</string>
+    <string name="fit_FEFU">Пожалуй, лучший фитнес трекер в ДВФУ</string>
+    <string name="stud_create">Созданный студентами</string>
+    <string name="registration">Зарегистироваться</string>
+    <string name="Acc">Уже есть аккаунт?</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+    <string name="other">Другое</string>
+    <string name="login">Логин</string>
+    <string name="name">Имя или никнейм</string>
+    <string name="pass">Пароль</string>
+    <string name="pass_again">Повторите пароль</string>
+    <string name="Sex">Пол</string>
+    <string name="reg">Регистрация</string>
+    <string name="enter">Вход</string>
+    <string name="agree">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных, а также принимаете пользовательское соглашение</string>
+    <string name="arrowback">ArrowBack</string>
+
+</resources>
