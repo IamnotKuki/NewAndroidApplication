@@ -42,7 +42,7 @@
         android:layout_marginTop="30dp"
 
         android:text="@string/registration"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         android:stateListAnimator="@null"
 
         app:layout_constraintEnd_toEndOf="parent"

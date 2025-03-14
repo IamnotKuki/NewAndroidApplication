@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyNewApplication"
         tools:targetApi="31">
-        <activity android:name=".BeAuthorizedActivity"/>
+        <activity
+            android:name=".ActivityState"
+            android:exported="false" />
+        <activity android:name=".BeAuthorizedActivity" />
         <activity
             android:name=".RegActivity"
             android:exported="false" />
