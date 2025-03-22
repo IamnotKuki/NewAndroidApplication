@@ -21,5 +21,9 @@
     <string name="bottom_active">bottom_active</string>
     <string name="active">Активность</string>
     <string name="profile">Профиль</string>
+    <string name="Letsstart">Нажимай на кнопку ниже и начинаем трекать активность</string>
+    <string name="Letsfit">Время потренить</string>
+    <string name="TabLayout_description">Вкладки для переключения между фрагментами</string>
+    <string name="Start_Button">Старт</string>
 
 </resources>
