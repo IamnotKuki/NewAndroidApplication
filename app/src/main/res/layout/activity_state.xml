@@ -5,13 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray"
     tools:context=".ActivityState">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
+        android:background="?attr/colorSurface"
+        android:theme="@style/AppTheme.Fragment"
+
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,13 +32,15 @@
 
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/fab" />
+        app:srcCompat="@drawable/fabb" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
-        android:background="@color/white"
         android:layout_height="wrap_content"
+
+        android:theme="@style/ThemeOverlay.AppTheme.BottomNavigationView"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

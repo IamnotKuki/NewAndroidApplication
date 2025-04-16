@@ -1,6 +1,8 @@
 package ru.example.mynewapplication
 
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import androidx.fragment.app.Fragment
@@ -9,12 +11,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class ActivityState : AppCompatActivity() {
 
     private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var imageButton1: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_state)
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
+        imageButton1 = findViewById(R.id.imageButton1) // Инициализация кнопки
 
         // Добавляем фрагмент "Активность" при первом запуске
         if (savedInstanceState == null) {
@@ -28,10 +32,12 @@ class ActivityState : AppCompatActivity() {
             when (item.itemId) {
                 R.id.navigation_active -> {
                     showFragment("ACTIVE_FRAGMENT") { ActiveFragment() }
+                    imageButton1.visibility = View.VISIBLE // Показываем кнопку
                     true
                 }
                 R.id.navigation_profile -> {
                     showFragment("PROFILE_FRAGMENT") { ProfileFragment() }
+                    imageButton1.visibility = View.GONE // Скрываем кнопку
                     true
                 }
                 else -> false

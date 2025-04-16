@@ -25,5 +25,9 @@
     <string name="Letsfit">Время потренить</string>
     <string name="TabLayout_description">Вкладки для переключения между фрагментами</string>
     <string name="Start_Button">Старт</string>
+    <string name="user_profile">Профиль</string>
+    <string name="save">Сохранить</string>
+    <string name="change_pass">Изменить пароль?</string>
+    <string name="exit">Выйти</string>
 
 </resources>
