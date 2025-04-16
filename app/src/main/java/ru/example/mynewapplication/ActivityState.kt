@@ -33,11 +33,27 @@ class ActivityState : AppCompatActivity() {
                 R.id.navigation_active -> {
                     showFragment("ACTIVE_FRAGMENT") { ActiveFragment() }
                     imageButton1.visibility = View.VISIBLE // Показываем кнопку
+
+                    // Удаляем PasswordChangeFragment, если он существует
+                    val passwordChangeFragment = supportFragmentManager.findFragmentByTag("PASSWORD_CHANGE_FRAGMENT")
+                    if (passwordChangeFragment != null) {
+                        supportFragmentManager.beginTransaction()
+                            .remove(passwordChangeFragment) // Удаляем фрагмент
+                            .commit()
+                    }
                     true
                 }
                 R.id.navigation_profile -> {
                     showFragment("PROFILE_FRAGMENT") { ProfileFragment() }
                     imageButton1.visibility = View.GONE // Скрываем кнопку
+
+                    // Удаляем PasswordChangeFragment, если он существует
+                    val passwordChangeFragment = supportFragmentManager.findFragmentByTag("PASSWORD_CHANGE_FRAGMENT")
+                    if (passwordChangeFragment != null) {
+                        supportFragmentManager.beginTransaction()
+                            .remove(passwordChangeFragment) // Удаляем фрагмент
+                            .commit()
+                    }
                     true
                 }
                 else -> false

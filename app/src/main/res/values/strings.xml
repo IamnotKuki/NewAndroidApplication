@@ -27,7 +27,10 @@
     <string name="Start_Button">Старт</string>
     <string name="user_profile">Профиль</string>
     <string name="save">Сохранить</string>
-    <string name="change_pass">Изменить пароль?</string>
+    <string name="change_pass">Изменить пароль</string>
     <string name="exit">Выйти</string>
+    <string name="accept">Принять</string>
+    <string name="new_pass">Новый пароль</string>
+    <string name="old_pass">Старый пароль</string>
 
 </resources>
