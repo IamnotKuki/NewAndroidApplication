@@ -1,0 +1,66 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Тип активности -->
+    <TextView
+        android:id="@+id/detailTypeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Расстояние -->
+    <TextView
+        android:id="@+id/detailDistanceTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/detailTypeTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Время добавления записи -->
+    <TextView
+        android:id="@+id/detailTimeAgoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="14sp"
+        android:textColor="?attr/colorSecondary"
+        app:layout_constraintTop_toBottomOf="@id/detailDistanceTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Продолжительность -->
+    <TextView
+        android:id="@+id/detailDurationTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="14sp"
+        android:textColor="?attr/colorSecondary"
+        app:layout_constraintTop_toBottomOf="@id/detailTimeAgoTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Никнейм пользователя -->
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="14sp"
+        android:textColor="?attr/colorSecondary"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/detailDurationTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
