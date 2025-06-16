@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+
+//класс для начального экрана
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         // Ищем кнопку по ID
         val button = findViewById<Button>(R.id.button1)
 
-        // Устанавливаем слушатель кликов
+        // для переключения на экран регистрации
         button.setOnClickListener {
             val intent = Intent(this, RegActivity::class.java)
             startActivity(intent)
@@ -32,13 +35,11 @@ class MainActivity : AppCompatActivity() {
 
         val button3 = findViewById<TextView>(R.id.button3)
 
+        // для переключения на экран авторизации
         button3.setOnClickListener {
             val intent = Intent(this, BeAuthorizedActivity::class.java)
             startActivity(intent)
         }
-
-
-
 
 
     }

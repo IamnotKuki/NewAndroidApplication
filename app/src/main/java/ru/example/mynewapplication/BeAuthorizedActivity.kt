@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+// класс для авторизации
 class BeAuthorizedActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,7 @@ class BeAuthorizedActivity : AppCompatActivity() {
             insets
         }
 
+        // для переключения на главный экран
         val image_button = findViewById<ImageButton>(R.id.imageButton)
         image_button.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -30,6 +32,7 @@ class BeAuthorizedActivity : AppCompatActivity() {
 
         val button1 = findViewById<TextView>(R.id.button1)
 
+        // для переключения на первый экран активностей внутри приложения
         button1.setOnClickListener {
             val intent = Intent(this, ActivityState::class.java)
             startActivity(intent)

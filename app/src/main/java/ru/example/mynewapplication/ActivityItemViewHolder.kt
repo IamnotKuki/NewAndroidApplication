@@ -5,10 +5,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ActivityItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    private val typeTextView: TextView = itemView.findViewById(R.id.detailTypeTextView)
-    private val distanceTextView: TextView = itemView.findViewById(R.id.detailDistanceTextView)
-    private val timeAgoTextView: TextView = itemView.findViewById(R.id.detailTimeAgoTextView)
-    private val durationTextView: TextView = itemView.findViewById(R.id.detailDurationTextView)
+    private val typeTextView: TextView = itemView.findViewById(R.id.detailType)
+    private val distanceTextView: TextView = itemView.findViewById(R.id.detailDistance)
+    private val timeAgoTextView: TextView = itemView.findViewById(R.id.detailTimeAgo)
+    private val durationTextView: TextView = itemView.findViewById(R.id.detailDuration)
     private val usernameTextView: TextView = itemView.findViewById(R.id.usernameTextView)
 
     fun bind(activityItem: ActivityListItem.ActivityItem, onItemClick: (ActivityListItem.ActivityItem) -> Unit) {

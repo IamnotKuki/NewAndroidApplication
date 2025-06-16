@@ -17,10 +17,10 @@ class ActivityDetailActivity : AppCompatActivity() {
         val timeAgo = intent.getStringExtra("timeAgo") ?: "Неизвестное время"
 
         // Находим TextView и устанавливаем текст
-        val detailTypeTextView: TextView = findViewById(R.id.detailTypeTextView)
-        val detailDurationTextView: TextView = findViewById(R.id.detailDurationTextView)
-        val detailDistanceTextView: TextView = findViewById(R.id.detailDistanceTextView)
-        val detailTimeAgoTextView: TextView = findViewById(R.id.detailTimeAgoTextView)
+        val detailTypeTextView: TextView = findViewById(R.id.detailType)
+        val detailDurationTextView: TextView = findViewById(R.id.detailDuration)
+        val detailDistanceTextView: TextView = findViewById(R.id.detailDistance)
+        val detailTimeAgoTextView: TextView = findViewById(R.id.detailTimeAgo)
 
         detailTypeTextView.text = type
         detailDurationTextView.text = duration

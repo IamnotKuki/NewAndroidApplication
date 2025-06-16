@@ -57,8 +57,8 @@ class ActivityAdapter (
     }
 
     class ActivityItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val typeTextView: TextView = itemView.findViewById(R.id.detailTypeTextView)
-        private val durationTextView: TextView = itemView.findViewById(R.id.detailDurationTextView)
+        private val typeTextView: TextView = itemView.findViewById(R.id.detailType)
+        private val durationTextView: TextView = itemView.findViewById(R.id.detailDuration)
 
         fun bind(activityItem: ActivityListItem.ActivityItem, onItemClick: (ActivityListItem.ActivityItem) -> Unit) {
             typeTextView.text = activityItem.type

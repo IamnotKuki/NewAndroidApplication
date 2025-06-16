@@ -10,8 +10,6 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:background="?attr/colorSurface"
         android:text="Дата"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

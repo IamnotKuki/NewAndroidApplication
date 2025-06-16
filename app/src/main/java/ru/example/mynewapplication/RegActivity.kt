@@ -17,6 +17,7 @@ import android.text.style.ForegroundColorSpan
 import android.widget.ImageButton
 import androidx.core.content.ContextCompat
 
+// класс регистрации
 
 class RegActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,7 @@ class RegActivity : AppCompatActivity() {
             insets
         }
 
+        // для переключения на главный экран
         val image_button = findViewById<ImageButton>(R.id.imageButton)
         image_button.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
