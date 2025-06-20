@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 class ActivityDetailActivity : AppCompatActivity() {
 
+    //возможно под удаление
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.item_activity)

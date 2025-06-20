@@ -6,6 +6,8 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ActivityState : AppCompatActivity() {
@@ -19,6 +21,22 @@ class ActivityState : AppCompatActivity() {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
         imageButton1 = findViewById(R.id.imageButton1) // Инициализация кнопки
+
+        val rv : RecyclerView = findViewById(R.id.rv)
+        rv.layoutManager = LinearLayoutManager(text.this)
+
+        val list = mutableListOf<Item>()
+
+        for (i in 0..100){
+            list.add(Item(
+                "TEXT ${i}",
+                "TEXT ${i}",
+                "TEXT ${i}",
+                "TEXT ${i}"
+            ))
+        }
+        rv.adapter = ActivityAdapter(list)
+
 
         // Добавляем фрагмент "Активность" при первом запуске
         if (savedInstanceState == null) {

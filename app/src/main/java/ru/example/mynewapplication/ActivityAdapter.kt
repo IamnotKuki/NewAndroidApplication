@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+/*
 class ActivityAdapter (
     private val items: List<ActivityListItem>,
     private val onItemClick: (ActivityListItem.ActivityItem) -> Unit
@@ -67,4 +68,39 @@ class ActivityAdapter (
             itemView.setOnClickListener { onItemClick(activityItem) }
         }
     }
+}*/
+
+data class Item(
+    val str1: String,
+    val str2: String,
+    val str3: String,
+    val str4: String
+)
+
+
+class ActivityAdapter (private val list: List<Item>) : RecyclerView.Adapter<ActivityAdapter.MyView>() {
+
+    class MyView(private val itemView: View) : RecyclerView.ViewHolder(itemView){
+        val str1: TextView = itemView.findViewById(R.id.detailDistance)
+        val str2: TextView = itemView.findViewById(R.id.detailDuration)
+        val str3: TextView = itemView.findViewById(R.id.detailType)
+        val str4: TextView = itemView.findViewById(R.id.detailTimeAgo)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyView {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_activity, parent, false)
+        return MyView(view)
+    }
+
+    override fun onBindViewHolder(holder: MyView, position: Int) {
+        holder.str1.text = list[position].str1
+        holder.str2.text = list[position].str2
+        holder.str3.text = list[position].str3
+        holder.str4.text = list[position].str4
+    }
+
+    override fun getItemCount(): Int {
+        return list.count()
+    }
+
 }
