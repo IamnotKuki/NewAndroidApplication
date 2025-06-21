@@ -22,21 +22,6 @@ class ActivityState : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
         imageButton1 = findViewById(R.id.imageButton1) // Инициализация кнопки
 
-        val rv : RecyclerView = findViewById(R.id.rv)
-        rv.layoutManager = LinearLayoutManager(text.this)
-
-        val list = mutableListOf<Item>()
-
-        for (i in 0..100){
-            list.add(Item(
-                "TEXT ${i}",
-                "TEXT ${i}",
-                "TEXT ${i}",
-                "TEXT ${i}"
-            ))
-        }
-        rv.adapter = ActivityAdapter(list)
-
 
         // Добавляем фрагмент "Активность" при первом запуске
         if (savedInstanceState == null) {

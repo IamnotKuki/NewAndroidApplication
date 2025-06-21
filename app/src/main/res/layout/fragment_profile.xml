@@ -110,5 +110,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:lineHeight="24sp" />
 
-
 </FrameLayout>

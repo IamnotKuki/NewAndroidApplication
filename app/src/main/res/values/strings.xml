@@ -32,5 +32,7 @@
     <string name="accept">Принять</string>
     <string name="new_pass">Новый пароль</string>
     <string name="old_pass">Старый пароль</string>
+    <string name="share_icon">share_icon</string>
+    <string name="trash_icon">trash_icon</string>
 
 </resources>

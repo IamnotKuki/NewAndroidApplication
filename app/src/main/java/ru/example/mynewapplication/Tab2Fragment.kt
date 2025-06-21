@@ -1,10 +1,12 @@
 package ru.example.mynewapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,8 +16,7 @@ class Tab2Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_tab2, container, false)
-        return view
+        return inflater.inflate(R.layout.fragment_tab2, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -25,31 +26,15 @@ class Tab2Fragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         // Пример данных
-        val usersActivities = listOf(
+        val activities = listOf(
             ActivityListItem.DateHeader("Вчера"),
-            ActivityListItem.ActivityItem("Бег", "30 минут", "5 км", "2 часа назад", "user123"),
-            ActivityListItem.ActivityItem("Плавание", "45 минут", "1.5 км", "5 часов назад", "swimmer456"),
-            ActivityListItem.DateHeader("11 апреля"),
-            ActivityListItem.ActivityItem("Бег", "20 минут", "3 км", "11 апреля", "runner789"),
-            ActivityListItem.DateHeader("1 апреля"),
-            ActivityListItem.ActivityItem("Велосипед", "1 час", "15 км", "1 апреля", "cyclist101")
+            ActivityListItem.ActivityItem("14.32 км", "2 часа 46 минут", "Серфинг", "@van_darkholme", "14 часов назад", "14:49", "16:31"),
+            ActivityListItem.ActivityItem("228 м", "14 часов 48 минут", "Качели", "@techniquepasha", "14 часов назад", "02:48", "16:48"),
+            ActivityListItem.ActivityItem("10 км", "1 час 10 минут", "Езда на кадилак", "@morgen_shtern", "14 часов назад", "12:05", "13:05")
         )
 
-        for (item in usersActivities) {
-            when (item) {
-                is ActivityListItem.DateHeader -> println("DateHeader: ${item.date}")
-                is ActivityListItem.ActivityItem -> println(
-                    "ActivityItem: ${item.type}, ${item.distance}, ${item.timeAgo}, ${item.username}"
-                )
-            }
-        }
-
-        // Инициализация адаптера
-        val adapter = ActivityAdapter(usersActivities) { activityItem ->
-            // Обработка нажатия на элемент активности
-            // Здесь можно организовать переход на экран детализации
-        }
-
+        // Устанавливаем адаптер
+        val adapter = ActivityAdapter(activities)
         recyclerView.adapter = adapter
     }
 }

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Верхний блок -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/arrowback"
+            app:srcCompat="@drawable/arrow_back"
+            app:tint="@color/purple_500"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detailType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+
+            android:theme="@style/Text"
+            android:text="Type"
+            tools:text="Пример текста"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintEnd_toStartOf="@+id/trashButton" />
+
+        <ImageButton
+            android:id="@+id/trashButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+
+
+            android:contentDescription="@string/trash_icon"
+            app:srcCompat="@drawable/trash_icon"
+
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintEnd_toStartOf="@+id/shareButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/shareButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+
+            android:contentDescription="@string/share_icon"
+            app:srcCompat="@drawable/share_icon"
+
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Поле ввода -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/constraint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Расстояние -->
+        <TextView
+            android:id="@+id/detailDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Расстояние"
+
+            android:paddingStart="20dp"
+            android:padding="6dp"
+            android:background="?attr/colorSurface"
+            android:gravity="start"
+            style="@style/fit_FEFU"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Время добавления записи -->
+        <TextView
+            android:id="@+id/detailTimeAgo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Время"
+
+            android:gravity="start"
+            android:paddingStart="20dp"
+
+            android:textSize="16sp"
+
+            app:layout_constraintTop_toBottomOf="@id/detailDistance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Продолжительность -->
+        <TextView
+            android:id="@+id/detailDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Продолжительность"
+
+            android:paddingStart="20dp"
+            android:padding="6dp"
+            android:background="?attr/colorSurface"
+            android:gravity="start"
+            style="@style/fit_FEFU"
+
+            app:layout_constraintTop_toBottomOf="@id/detailTimeAgo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Начало -->
+        <TextView
+            android:id="@+id/detailStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Старт"
+
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:paddingStart="20dp"
+            android:textSize="16sp"
+
+            app:layout_constraintTop_toBottomOf="@id/detailDuration"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Время начала -->
+        <TextView
+            android:id="@+id/detailTimeStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Время"
+
+            android:gravity="start"
+            android:paddingStart="20dp"
+            android:textSize="16sp"
+
+            app:layout_constraintStart_toEndOf="@id/detailStart"
+            app:layout_constraintBaseline_toBaselineOf="@id/detailStart" />
+
+        <!-- | -->
+        <TextView
+            android:id="@+id/detailrazd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="|"
+
+            android:gravity="start"
+            android:paddingStart="20dp"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toEndOf="@id/detailTimeStart"
+            app:layout_constraintBaseline_toBaselineOf="@id/detailTimeStart" />
+
+        <!-- Конец -->
+        <TextView
+            android:id="@+id/detailEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Финиш"
+
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:textSize="16sp"
+
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/detailrazd"
+            app:layout_constraintBaseline_toBaselineOf="@id/detailrazd" />
+
+        <!-- Время конца -->
+        <TextView
+            android:id="@+id/detailTimeEnd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Время"
+
+            android:gravity="start"
+            android:paddingStart="20dp"
+
+            android:textSize="16sp"
+
+            app:layout_constraintStart_toEndOf="@id/detailEnd"
+            app:layout_constraintBaseline_toBaselineOf="@id/detailEnd"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Поле ввода комментария -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            app:layout_constraintTop_toBottomOf="@id/detailStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Комментарий" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
