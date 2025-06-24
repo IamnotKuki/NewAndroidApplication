@@ -108,43 +108,4 @@ class Tab1Fragment : Fragment() {
 
         recyclerView.adapter = adapter
     }
-/*
-        // Пример данных
-        val activities = mutableListOf<ActivityListItem>()
-        activities.add(ActivityListItem.DateHeader("Вчера"))
-
-        // Добавляем несколько активностей для "Вчера"
-        activities.add(ActivityListItem.ActivityItem("Бег", "30 минут", "5 км", "21 час назад"))
-        activities.add(ActivityListItem.ActivityItem("Плавание", "45 минут", "1.5 км", "15 часов назад"))
-
-        // Добавляем заголовок для "23 апреля"
-        activities.add(ActivityListItem.DateHeader("23 апреля"))
-        activities.add(ActivityListItem.ActivityItem("Бег", "20 минут", "3 км", "23 апреля"))
-        activities.add(ActivityListItem.ActivityItem("Велосипед", "1 час", "15 км", "23 апреля"))
-
-        // Инициализация адаптера
-        val adapter = ActivityAdapter(activities) { activityItem ->
-            // Обработка нажатия на элемент активности
-            val intent = Intent(requireContext(), ActivityDetailActivity::class.java).apply {
-                putExtra("type", activityItem.type)
-                putExtra("duration", activityItem.duration)
-                putExtra("distance", activityItem.distance)
-                putExtra("timeAgo", activityItem.timeAgo)
-            }
-            startActivity(intent)
-        }
-
-        recyclerView.adapter = adapter
-
-        // Проверяем, есть ли данные в списке
-        if (activities.isNotEmpty()) {
-            recyclerView.visibility = View.VISIBLE
-            textView2.visibility = View.GONE
-            textView.visibility = View.GONE
-        } else {
-            recyclerView.visibility = View.GONE
-            textView2.visibility = View.VISIBLE
-            textView.visibility = View.VISIBLE
-        }
-*/
 }
