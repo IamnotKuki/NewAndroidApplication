@@ -2,6 +2,7 @@ package ru.example.mynewapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,15 @@ class ActivityDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detail_activity)
+
+        val trashButton = findViewById<ImageButton>(R.id.trashButton)
+        val shareButton = findViewById<ImageButton>(R.id.shareButton)
+
+        val isHidden = intent.getBooleanExtra("HIDE_BUTTONS", false)
+        if (isHidden) {
+            trashButton.visibility = View.GONE
+            shareButton.visibility = View.GONE
+        }
 
         val image_button = findViewById<ImageButton>(R.id.imageButton)
         image_button.setOnClickListener {
@@ -41,8 +51,8 @@ class ActivityDetailActivity : AppCompatActivity() {
         detailDistanceTextView.text = distance
         detailTimeAgoTextView.text = timeAgo
 
-        detailTimeStartTextView.text = "$startTime"
-        detailTimeEndTextView.text = "$endTime"
+        detailTimeStartTextView.text = startTime
+        detailTimeEndTextView.text = endTime
     }
 
 }

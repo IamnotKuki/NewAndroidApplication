@@ -74,4 +74,11 @@
         <item name="colorSurface">@color/light_gray</item>
     </style>
 
+    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/deep_gray</item>
+        <item name="strokeColor">@color/button_stroke_color</item> <!-- Цвет контура -->
+        <item name="strokeWidth">2dp</item> <!-- Толщина контура -->
+        <item name="cornerRadius">13dp</item> <!-- Закругление углов -->
+    </style>
 </resources>

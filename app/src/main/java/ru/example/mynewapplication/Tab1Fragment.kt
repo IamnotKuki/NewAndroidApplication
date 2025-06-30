@@ -72,10 +72,24 @@ class Tab1Fragment : Fragment() {
         // Пример данных
         val activities = listOf(
             ActivityListItem.DateHeader("Вчера"),
-            ActivityListItem.ActivityItem("14.32 км", "2 часа 46 минут", "Серфинг", "", "14 часов назад", "14:49", "16:31"),
+            ActivityListItem.ActivityItem(
+                "14.32 км",
+                "2 часа 46 минут",
+                "Серфинг",
+                "",
+                "14 часов назад",
+                "14:49",
+                "16:31"),
 
             ActivityListItem.DateHeader("Май 2022 года"),
-            ActivityListItem.ActivityItem("1000 м", "60 минут", "Велосипед", "", "29.05.2022", "10:00", "11:00")
+            ActivityListItem.ActivityItem(
+                "1000 м",
+                "60 минут",
+                "Велосипед",
+                "",
+                "29.05.2022",
+                "10:00",
+                "11:00"),
         )
 
         // Инициализация адаптера с обработчиком нажатия

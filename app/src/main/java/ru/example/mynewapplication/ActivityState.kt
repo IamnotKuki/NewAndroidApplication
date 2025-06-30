@@ -1,5 +1,6 @@
 package ru.example.mynewapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
@@ -13,14 +14,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class ActivityState : AppCompatActivity() {
 
     private lateinit var bottomNavigationView: BottomNavigationView
-    private lateinit var imageButton1: ImageButton
+    private lateinit var imageButtonStart: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_state)
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
-        imageButton1 = findViewById(R.id.imageButton1) // Инициализация кнопки
+        imageButtonStart = findViewById(R.id.imageButton_start) // Инициализация кнопки
 
 
         // Добавляем фрагмент "Активность" при первом запуске
@@ -30,12 +31,19 @@ class ActivityState : AppCompatActivity() {
             }
         }
 
+        // Устанавливаем слушатель для кнопки imageButton_start
+        imageButtonStart.setOnClickListener {
+            // Переход на экран выбора типа активности
+            val intent = Intent(this, TypesActivity::class.java)
+            startActivity(intent)
+        }
+
         // Устанавливаем слушатель для BottomNavigationView
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_active -> {
                     showFragment("ACTIVE_FRAGMENT") { ActiveFragment() }
-                    imageButton1.visibility = View.VISIBLE // Показываем кнопку
+                    imageButtonStart.visibility = View.VISIBLE // Показываем кнопку
 
                     // Удаляем PasswordChangeFragment, если он существует
                     val passwordChangeFragment = supportFragmentManager.findFragmentByTag("PASSWORD_CHANGE_FRAGMENT")
@@ -48,7 +56,7 @@ class ActivityState : AppCompatActivity() {
                 }
                 R.id.navigation_profile -> {
                     showFragment("PROFILE_FRAGMENT") { ProfileFragment() }
-                    imageButton1.visibility = View.GONE // Скрываем кнопку
+                    imageButtonStart.visibility = View.GONE // Скрываем кнопку
 
                     // Удаляем PasswordChangeFragment, если он существует
                     val passwordChangeFragment = supportFragmentManager.findFragmentByTag("PASSWORD_CHANGE_FRAGMENT")
